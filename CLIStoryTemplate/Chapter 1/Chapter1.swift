@@ -22,6 +22,7 @@ let chosenPeople = "The Kosen"
 let wipeoutPopulation = 2_000_000_000_
 
 func chapterOne() {
+
     print(storyTitle)
     print("In a not so distant future, two distinct societies emerged from \(firstArea)")
     print("The planet had descended into chaos, where lawlessness reigned and the land had become treacherous because of \(disaster1) wiping through \(firstArea) causing famines, war, and illness. Those who managed to eke out an existence did so through their unique skills, be it")
@@ -41,6 +42,7 @@ func chapterOne() {
     
 
   
+
 }
 
 
