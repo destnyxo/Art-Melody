@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		74E289BA2A7C21FC003072EC /* TeamNameStory */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TeamNameStory; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E289BD2A7C21FC003072EC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		74E289C42A7C220C003072EC /* Chapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; };
+		74E289C42A7C220C003072EC /* Chapter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; usesTabs = 1; };
 		74E289C62A7C2211003072EC /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		74E289C82A7C221D003072EC /* Chapter3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3.swift; sourceTree = "<group>"; };
 		74E289CA2A7C2221003072EC /* Chapter4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4.swift; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3UR85MK9RT;
+				DEVELOPMENT_TEAM = UZ88BPTN35;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -315,7 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3UR85MK9RT;
+				DEVELOPMENT_TEAM = UZ88BPTN35;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
