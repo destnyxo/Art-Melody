@@ -1,14 +1,45 @@
 import Foundation
+
+func chapterTwo(){
+    
 let name:String = "Dr.Wallace Doubin"
 let daysLefttoSaveTheplanet:Int = 5
 let place:String = "space"
 let firstplace:String = "earth"
 let secondplace:String = "space colonies"
 
-func chapterTwo(){
+var groups = [[String]]()
+var groupA = ["Detroit", "Brooklyn", "Alanta"]
+var groupB = ["Michigan", "New York", "Georgia"]
+enum Weather {
+    case sun, rain, wind, snow, unknown
+}
+let forecast = Weather.sun
+
+if forecast == .sun {
+    print("It should be a nice day.")
+} else if forecast == .rain {
+    print("Pack an umbrella.")
+} else if forecast == .wind {
+    print("Wear something warm")
+} else if forecast == .snow {
+    print("School is cancelled.")
+} else {
+    print("Our forecast generator is broken!")
+}
+    var Aliens = ["X", "Zay", "Tut", "Ump"]
+    let numbers = [1, 2, 3, 4]
+    
+    Aliens.append("X")
+    Aliens.append("Zay")
+    Aliens.append("Tut")
+    Aliens.append("Ump")
+
+
+//func chapterTwo(){
     print(" Among the refugees in space, a brilliant scientist named \(name) existed.")
     print("He had been a beacon of hope for the space colonies.")
-    print(" \(name) worked so hard to come up with this purified water that would bring fruitation amongst the crops.")
+    print(" \(name) worked so hard to come up with the solution for the water source contamination degradation that would bring fruitation amongst the crops.")
     print("His extensive research had uncovered the truth about the devastating chemtrails that had wreaked havoc on \(firstplace) fragile ecosystem, leading to the downfall of society. From this devastation, \(name) pondered thoughts of how and why this corruption took place. He completed extensive research and extreme caution to his process of regaining \(firstplace) back to it's natural state.")
     print(" \(name) had always been an advocate for the environment. Growing up in a small rural town, he had witnessed the gradual degradation of nature due to pollution and the mysterious trails that streaked across the sky.")
     print("Even when it was a no fly zone you seen these long white lines, known as chemtrails being left by these planes soaring in the sky. The topic of controversy and conspiracy had been plagued in the community for years of what possibly could become the affect from this. \(name) was determined to uncover the truth and, if possible, find a way to reverse the chemtrails negative effect on \(firstplace). ")
@@ -16,7 +47,7 @@ func chapterTwo(){
     print("People on \(firstplace) became very ill over time and the mass majority parished from this evil doing. ")
     print("The sinister agenda behind these chemtrails was no longer a mystery to him.")
     print(" He was shocked and appalled to find out that the man who taught him his practice was behind all of this madness.")
-    print("As \(name) continued his groundbreaking on one of the space stations orbiting earth, the desperate cries for help from those remaining on the surface grew louder and more poignant.")
+    print("As \(name) tried to mentally continue his groundbreaking chemistry on who and why, he couldn't help but feel dizzy and nauseous as this space station began orbiting earth. The desperate cries for help from those remaining on the surface grew louder and more poignant.")
     print("The situation had reached a dire point, with dwindling resources and an increase struggle to survive.")
     // Your portion of the story goes here
 }
