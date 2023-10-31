@@ -161,12 +161,17 @@ let originalPop = 7_000_000_000
 
 		print("The Earth's temperature has reached \(temperature) degrees. It is now unlivable.")
 	}
+	
 	func performTaskC() {
+		print("Those who could farm and garden were known as \(chosenPeople).\(chosenPeople) were considered chosen because they were able to create villages where food grew on a land that was decaying .\(chosenPeople) had an mystical understanding of the land,using their knowledge to heal the soil, revive ancient farming practices, and cultivate food that sustained their people. Many of the \(chosenPeople) had the gift to terraform. They could transform any atmosphere so that it was suitable for supporting human life.")
 		
+		print("Since oxygen was an essential element to keep people who settled in \(secondArea) alive many of the \(chosenPeople) were stolen by \(villian2). Some of the issues faced by \(chosenPeople) on \(firstArea) was the \(villian1) invading their enclave and robbing them of their livestock, food, and herbs. The \(villian1) would also kidnap some of \(chosenPeople) to exploit their gifts of knowing how to work with the \(firstArea). They would enslave them and make them work tirelessly to build what \(chosenPeople) had in their villages. The \(villian1) would often barter some of \(chosenPeople) to the \(villian2) for resources on the \(villian2) colonizer ships.")
+		
+		print("The Kosen's extraordinary gifts held the key to \(firstArea)'s revival and humanity's future among the stars.")
 		
 	}
 
-	let choice = "B"
+	let choice = "C"
 
 	switch choice {
 		case "A":
