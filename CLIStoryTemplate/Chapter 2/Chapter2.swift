@@ -45,7 +45,7 @@ func chapterTwo(){
         var snow: Bool
         var windy: Bool
         
-        
+        //representationfor if else statement
         func weatherReport() {
             if sun{
                 print("It's sunny outside")
@@ -91,7 +91,7 @@ func chapterTwo(){
     Aliens.append("Zay")
     Aliens.append("Tut")
     Aliens.append("Ump")
-    
+    //representation for a loop
     for day in (1...5).reversed() {
         print("Dooms Day in \(day) days...")
         
