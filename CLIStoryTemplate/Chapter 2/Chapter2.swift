@@ -1,19 +1,19 @@
 import Foundation
 
 func chapterTwo(){
-    
+    //Constant variable representation
     let name:String = "Dr.Wallace Doubin"
     let daysLefttoSaveTheplanet:Int = 5
     let place:String = "space"
     let firstplace:String = "earth"
     let secondplace:String = "space colonies"
     
-    var groups = [[String]]()
-    var groupA = ["Detroit", "Brooklyn", "Alanta"]
-    var groupB = ["Michigan", "New York", "Georgia"]
-    //enum representing the weather
+    //Variable representation
+    var groupA: Int = 10
+    var groups = groupA
+    
+   //Struct representation
     struct Spaceship {
-        
         let name: String
         var color: String = "black"
         var model: String
@@ -22,12 +22,13 @@ func chapterTwo(){
     }
     
     let ship1 = Spaceship(name: "The MotherShip", model: "frieght")
-    //representation of a enum
+    
+    //Representation of a enum
     enum Weather {
         case sun, rain, wind, snow, unknown
-        
-    }
-    //representation of a string
+        }
+    
+    //Representation of a string
     func getWeatherInput() -> String {
         print("Enter the weather: ")
         if let weather = readLine() {
@@ -38,14 +39,14 @@ func chapterTwo(){
             print("The weather today is: \(weather)")
         }
     }
-    //representation of a struct
+    //Representation of a struct
     struct WeatherAnalyzer {
         var sun: Bool
         var rain: Bool
         var snow: Bool
         var windy: Bool
         
-        //representationfor if else statement
+        //Representation for if else statement
         func weatherReport() {
             if sun{
                 print("It's sunny outside")
@@ -84,13 +85,22 @@ func chapterTwo(){
     } else {
         print("Our forecast generator is broken!")
     }
+    
+    //Null representation
+    func nullFunctionForSpaceship() {
+        //This function does nothing and returns no value
+        //It's just a placeholder or an empty function for a spaceship
+    }
+    //Representation of an String array
     var Aliens = ["X", "Zay", "Tut", "Ump"]
     let numbers = [1, 2, 3, 4]
     
+    //Representation of adding elements to an array of strings
     Aliens.append("X")
     Aliens.append("Zay")
     Aliens.append("Tut")
     Aliens.append("Ump")
+    
     //representation for a loop
     for day in (1...5).reversed() {
         print("Dooms Day in \(day) days...")
@@ -105,18 +115,31 @@ func chapterTwo(){
             var isInvisible: Bool = false
         }
     }
-    //Loop representation for a count down
-    var countdown = 10
     
-    while countdown > 0 {
-       print("\(countdown)...")
-        countdown -= 1
+    //Optional representation
+    var spaceFunction: (() -> Void)?
+    var earthFunction: (() -> Void)?
+    
+    func exploreSpace() {
+        print("Exporing the vast expanse of space!")
+        }
+    
+    spaceFunction = exploreSpace
+    
+    if let spaceFunction = spaceFunction {
+        spaceFunction()
+    } else {
+        print("No function assigned for space exploration.")
         
-   }
+        if let earthFunction = earthFunction{
+            earthFunction()
+            
+        } else {
+            print("No function assigned for exploring Earth.")
+            
+        }
+    }
     
-   print("Blast off!")
-    
-
 
 //func chapterTwo(){
     print(" Among the refugees in space, a brilliant scientist named \(name) existed.")
@@ -127,7 +150,17 @@ func chapterTwo(){
     print("Even when it was a no fly zone you seen these long white lines, known as chemtrails being left by these planes soaring in the sky. The topic of controversy and conspiracy had been plagued in the community for years of what possibly could become the affect from this. \(name) was determined to uncover the truth and, if possible, find a way to reverse the chemtrails negative effect on \(firstplace). ")
     
     print("\(name) laboratory, was nestled in a remote corner of Detroit and was filled with strange contraptions and untested inventions. He was on the verge of a discovery that could change humanity's understanding of the cosmos and the affect the chemtrails had on \(firstplace), but he could never have anticipated the extraordinary turn his life would take one fateful night. It was a clear, starry evening when \(name) set up his latest experiment. He was testing a new device designed to harness energy from distant celestial bodies, a feat that would revolutionize the universe quality of air that could possibly be the solution to the crops regaining natural resources to maintain growth, fertility and light. As he adjusted the controls, a blinding burst of rays engulfed the laboratory. Stunned, he found himself floating in the air, surrounded by a swirling vortex of energy. Disorientation was palpable as he realized he was no longer on the ground and was floating into outerspace.")
+   
+    //Loop representation for a count down
+    var countdown = 10
     
+    while countdown > 0 {
+       print("\(countdown)...")
+        countdown -= 1
+        
+   }
+    
+   print("Blast off!")
           print("\(name) was being pulled aboard an otherworldly spacecraft, surrounded by beings that were both fascinating and terrifying. They were tall, slender, with elongated limbs and irridescent skin. Their eyes held a profound wisdom, and they communicated with him through a form of telepathy of which he later on grew to understand. They were The Marauding Banding Outlaws")
     
     print("People on \(firstplace) became very ill over time and the mass majority parished from this evil doing. ")

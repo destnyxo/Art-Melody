@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>28</string>
+					<string>21</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>27</string>
+					<string>20</string>
 					<key>Timestamp</key>
-					<string>720977988.944999</string>
+					<string>721007210.4136339</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,16 +34,16 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>        
+				<string>        var isInvisible: Bool = false
 </string>
 				<key>leading</key>
-				<string>    enum Weather {
-        case sun, rain, wind, snow, unknown
+				<string>        var model: String
+        var hasLights: Bool = true
 </string>
 				<key>trailing</key>
 				<string>    }
-    //representation of a string
-    func getWeatherInput() -&gt; String {
+    
+    let ship1 = Spaceship(name: "The MotherShip", model: "frieght")
 </string>
 			</dict>
 			<key>type</key>
