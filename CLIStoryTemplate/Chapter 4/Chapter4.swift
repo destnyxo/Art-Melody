@@ -4,83 +4,85 @@
 //
 
 import Foundation
+func  greetDr() {
+    print("So we meet again old friend")
+    
+    
+}
+func tellStory() {
+    let name = ("Dr. Wallace")
+    let name2 = ("Dr. Sin Elclair")
+    
+    var numberOfScientists: Int? = 1000
+    // Create a enum to represent theb number of scientist in the world
+    enum NumberOfScientists {
+        case OneThousand
+    }
+    
+    
+    // Get the current number of scientist in the world
+    let currentNumberofScientists = NumberOfScientists.OneThousand
+    // Print number of Scientist in the world tot he console
+    print("There are currently \(currentNumberofScientists) scientist in the world")
+    
+    // create an optional to represent the number of Scientists in the world
+    // NumberofScientists: Int? = 1000
+    // check if the number of scientist is greater than 0
+    
+    if numberOfScientists! > 0 {
+        // The number of scientists is valid
+        
+        print( "There are currently \(numberOfScientists!) scientists in the world")
+        
+        var travelToEarth: Bool
+        //Ask Dr. Wallace if he agrees to go to Earth
+        print ("Dr. Wallace, would like to go to Earth?")
+        travelToEarth = true
+        
+        // Use on if-else ststementto determine what to do next
+        if travelToEarth {
+            // Dr. Wallace agrees to go to Earth.
+            print("Excellent! We will begin preparations immediately.")
+        } else {
+            print("Stay on ship")
+        }
+        
+        print(storyTitle)
+        
+        
+        
+    }
+    // This function takes no arguements and returns nothing it simply prints the greeting string
+    
+    
+    //ceate a struct
+    struct Person {
+        let name: String
+        var age: Int
+        var occupation: String
+        //= Person(name: "DrWallaceDoubin", age: 59)
+        //= person.name
+        // This assigns the string DrWallace to the variable personName
+    }
+    let person1 = Person(name: "Dr.Wallace", age: 59, occupation: "Scientist")
+    
+
+    print("\(person1.name) went to work immediately, sharing his research and collaborating with the few remaining scientist on Earth")
+// create an array
+}
 
 func chapterFour() {
     // Your portion of the story goes here
     let storyTitle: String = "Bridges A Chem Tale"
 
-    func tellStory() {
-        let name = ("Dr. Wallace")
-        let name2 = ("Dr. Sin Elclair")
-        
-        var numberOfScientists: Int? = 1000
-        // Create a enum to represent theb number of scientist in the world
-        enum NumberOfScientists {
-            case OneThousand
-        }
-        
-        
-        // Get the current number of scientist in the world
-        let currentNumberofScientists = NumberOfScientists.OneThousand
-        // Print number of Scientist in the world tot he console
-        print("There are currently \(currentNumberofScientists) scientist in the world")
-        
-        // create an optional to represent the number of Scientists in the world
-        // NumberofScientists: Int? = 1000
-        // check if the number of scientist is greater than 0
-        
-        if numberOfScientists! > 0 {
-            // The number of scientists is valid
-            
-            print( "There are currently \(numberOfScientists!) scientists in the world")
-            
-            var travelToEarth: Bool
-            //Ask Dr. Wallace if he agrees to go to Earth
-            print ("Dr. Wallace, would like to go to Earth?")
-            travelToEarth = true
-            
-            // Use on if-else ststementto determine what to do next
-            if travelToEarth {
-                // Dr. Wallace agrees to go to Earth.
-                print("Excellent! We will begin preparations immediately.")
-            } else {
-                print("Stay on ship")
-            }
-            
-            print(storyTitle)
-            
-            
-            
-        }
-        // This function takes no arguements and returns nothing it simply prints the greeting string
-        func  greetDr() {
-            print("So we meet again old friend")
-            greetDr()
-            
-        }
-        
-        //ceate a struct
-        struct Person {
-            let name: String
-            var age: Int
-            var occupation: String
-            //= Person(name: "DrWallaceDoubin", age: 59)
-            //= person.name
-            // This assigns the string DrWallace to the variable personName
-        }
-        let person1 = Person(name: "Dr.Wallace", age: 59, occupation: "Scientist")
-        
-    
-        print("\(person1.name) went to work immediately, sharing his research and collaborating with the few remaining scientist on Earth")
-    // create an array
-}
     let nutrients: [String] = ["Phosphorus, Potassium, Nitrogen"]
     let Phosphorus = nutrients[0]
     // interate over the elements of the array using a for loop
     for nutrient in nutrients {
         print(nutrient)
        
-        
+        greetDr()
+        tellStory()
         print ("These are the building blocks of soil and plant life")
             print("Together they developed a plan to cleanse the atmosphere, rejuvanate the clay soil, and make the land habitable once more")}
     
@@ -106,7 +108,6 @@ func chapterFour() {
         
         print("Earth was no longer a forsaken planet but a testament to the power of unity and science in the face of dark times.")
     
-    tellStory()
 }
 
         
