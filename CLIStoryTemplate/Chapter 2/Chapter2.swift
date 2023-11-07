@@ -3,15 +3,24 @@ import Foundation
 func chapterTwo(){
     //Constant variable representation
     let name:String = "Dr.Wallace Doubin"
-    let daysLefttoSaveTheplanet:Int = 5
-    let place:String = "space"
+    let _:Int = 5
+    let _:String = "space"
     let firstplace:String = "earth"
-    let secondplace:String = "space colonies"
+    let _:String = "space colonies"
     
     //Variable representation
     var groupA: Int = 10
     var groups = groupA
     
+    //Representation of a unwrap
+    var airQualityLevel: Int? = 80
+    
+        if let airQuality = airQualityLevel {
+            print("The air Quality Level is \(String(describing: airQualityLevel))")
+       } else {
+        print("Air quality level is unavailable")
+   }
+              
    //Struct representation
     struct Spaceship {
         let name: String
@@ -95,12 +104,22 @@ func chapterTwo(){
     var Aliens = ["X", "Zay", "Tut", "Ump"]
     let numbers = [1, 2, 3, 4]
     
+    //Representation of a for loop
+    for _ in Aliens {
+        print("Alien: \(1) is shooting fire from his tentacles...")
+        print("Alien: \(2) is doing back flips in the air...")
+        print("Alien: \(3) is freezing earthlings with his saliva")
+        print("Alien: \(4) is flickering off and on. One minute you see him and then the next minute you don't")
+        
+          
+    
     //Representation of adding elements to an array of strings
     Aliens.append("X")
     Aliens.append("Zay")
     Aliens.append("Tut")
     Aliens.append("Ump")
     
+  
     //representation for a loop
     for day in (1...5).reversed() {
         print("Dooms Day in \(day) days...")
@@ -114,6 +133,8 @@ func chapterTwo(){
             var hasLights: Bool = true
             var isInvisible: Bool = false
         }
+    }
+   
     }
     
     //Optional representation
