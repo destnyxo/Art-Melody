@@ -3,51 +3,497 @@
 //  CLIStoryTemplate
 //
 
+
+// Nothing But The func()
 import Foundation
-let chapterOneTitle: String = "Emergence"
-let storyTitle: String = "Chem Tales"
-let characters = ["Wallace Doubine"]
-let firstArea = "Earth"
-let secondArea = "Space"
-let disaster1 = "chemtrails"
-let disaster2 = "Global Warming"
-let villian1 = "marauding bands of outlaws"
-let villian2 = "Space Colonizers "
+
+
+let titles = ["Emergence","Story Intro","Grieving Gaia","Few Are Chosen","I Need Some Space"]
+var storyTitle: String = "Bridges A Chem Tale"
+var villians = ["marauding bands of outlaws","Space Colonizers" ]
+var characters = ["Wallace Doubine","The Kosen"]
+var areas = ["Earth","Space", "55 Cancrie"] // cancrie had a livable climate. do a struct for planet cancrie
+var disasters = ["chemtrails","Global Warming"]
 var temperature: Int = 62
-let planetName = "55 Cancrie"
-var population: Int = 7_000_000_000_
+//var population: Int = 8_000_000_000
 var score = 85
-var str = "Your score was \(score)"
-let chosenPeople = "The Kosen"
-let wipeoutPopulation = 2_000_000_000_
-// MAKE AN ARRAY OF CHARACTERS NAMES
+var wipeoutPopulation = 2_000_000_000
+var CosmonautName = ""
+var USERC: String = ""
+var choice2: Bool = false
+
 
 func chapterOne() {
+	
+	func getCosomonautInformation() {
+		print("Welcome Cosmonaut. Before we begin, I want to know who you are and what brings you in.")
+		
+		print("Enter your Space Traveling Name:")
+		CosmonautName = "Lexus"
+		print("Cosmonaut: \(CosmonautName)")
+		
+	}
+	getCosomonautInformation()
+	
+	func earthORSpace(){
+		print(
+   """
+   Go to where the stars flicker or where the bird flies!
+   Let your imagination sail to a place it finds worth
+   We can visit The Mother \(areas[0])
+   Where the Human Race was given birth
+   Or we could travel beyond the skies
+   You know there is a place
+   I can show you a new world
+   Lets take a voyage through \(areas[1])
+   """
+		)
+	}
+	earthORSpace()
+	
+	//-------------------------------------------------
+	func chooseArea(){
+		
+		while(!choice2) {
+			print("Enter the area you want to explore . \(areas[0]) or \(areas[1])")
+			if let userChoice = readLine() {
+				USERC = userChoice
+				
+				let area1 = "\(areas[0])"
+				let area2 = "\(areas[1])"
+				
+				if area1 == USERC {
+					print("You've Chosen an \(areas[0]) exploration")
+					choice2.toggle()
+				} else if area2 == USERC {
+					print("The Mothership will now take you on a journey through \(areas[1])!")
+					choice2.toggle()
+				} else {
+					print("Invalid Option")
+				}
+			}
+		}
+		choice2.toggle()
+	}
+	chooseArea()
+	
+	//<-----------------------------
+	//	struct Society {
+	//		let groups = ["Argriculturalist","Captalist","Anarchist"] // the anarchist did crime while on Earth
+	//		let abilities = ["Gifts", "Resourceful", "Guile"]
+	//		var future: Int
+	//		let now: Int
+	//		let moonDistanceFromEarth = 238_900
+	//
+	//	mutating func calculateTheFuture() -> Int{
+	//		future = now * moonDistanceFromEarth // loops of incrementing year . Have number of year increasing
+	//		return future
+	//		}
+	//
+	//	} // enums to describe the characters ability and class
+	
+//		var future: Int
+//		let now: Int
+//		let moonDistanceFromEarth = 238_900
+//
+//		mutating func calculateTheFuture() -> Int {
+//			future = moonDistanceFromEarth / moonDistanceFromEarth + now + now // loop and ask until they get it right. variable for is correct . l
+//			return future
+//		}
+//
+//		init(now: Int) {
+//			self.now = now
+//			self.future = 0
+//		}
+		
+	func backgroundPoem() {
+		print("""
+   In a not so distant future, two distinct societies emerged from \(areas[0])
+   Having to flee a dying world but through a new one they would rebirth
+   One side bearing gifts
+   The other carrying out a curse
+   \(areas[1]) doesn't always keep distance
+   A war when a friend and an enemy have trouble coexisting
+   Keep your eyes focused on what's better when it seems you are headed for the worse
+   
+   """)
+		let groups = ["Agriculturalist", "Capitalist", "Anarchist"]
 
-    print(storyTitle)
-    print("In a not so distant future, two distinct societies, The Reasons and The Ways emerged from the planet Earth. \(firstArea)")
-    print("The planet had descended into chaos, where lawlessness reigned and the land had become treacherous because of \(disaster1) wiping through Planet Earth\(firstArea) causing famines, war, and illness. Those who managed to eke out an existence did so through their unique skills, be it")
-	// MAKE AN ARRAY OF PLAGUES
-          
-    print("farming the barren soil or defending their meager settlements from \(villian1).The vast majority of humanity had fled the planet's strife, taking refuge in the vast expanse of a Planet called 7 mile\(secondArea), where they had built thriving colonies and advanced civilizations. While some chose 7 mile\(secondArea) as a way to escape Planet Earth \(firstArea), alot were taken against their will by The Man\(villian2) looking to exploit the labor skills of those who were farmers and gardeners while on Planet Earth \(firstArea). Those who could farm and garden were known as the Olmecs\(chosenPeople). The Olmecs \(chosenPeople) were considered chosen because they were able to create villages where food grew on a land that was decaying . The \(chosenPeople) Olmecs kept their people alive by planting healing herbs that fought off sickness and also kept animlas alive. Since oxygen was an essential element to keep people who settled in 7 mile \(secondArea) alive.")
-	print("\(villian2)The Man would often invade the ships to take those who could farm and garden so the safety of the \(chosenPeople) Olmecs were always a concern.")
-	print("The new planet that the descedants of Planet Earth \(firstArea) now domiciled was beautiful. Named \(planetName) Home. It rained diamonds during its Spring like seasons. The \(chosenPeople) Olmecs usually parked their ship thier like a headquarter. The diamonds on \(planetName) Home was used to fill their ship and the diamonds could alose be used to med the soil. ")
-	print("Earths population was \(population) before the the catastrophe struck.")
-	print("The \(firstArea) became uninhabitable because of harmful \(disaster1) were released. Which led to a decrease in biodiversity leaving the earth with a water shortage and causing the Earths temperature to rise significantly , making the planet too hot for human survival. \(wipeoutPopulation) people were wiped out .")
+		for group in groups {
+			print("\(group):")
+
+			switch group {
+			case "Agriculturalist":
+				print("Abilities: gardening, farming, tending to livestock, community sustainability, cultural cultivation, harmony with nature.")
+			case "Capitalist":
+				print("Originating from Agriculturalist families, Capitalists exploit their skills learned from Agriculturalists for personal gain.")
+				print("Abilities: product promotion, city building, labor recruitment, resourcefulness.")
+			case "Anarchist":
+				print("Anarchists have roots in Agriculturalist practices but aspire to be Capitalists. A hybrid of good and evil, a product of both societies. This group combines skills learned from both groups to achieve their goals and to survive.")
+				print("Abilities: negotiation, guile, charm, self-reliance.")
+			default:
+				print("Unknown group.")
+			}
+
+			print("---")
+		}
+
+	}
+	
+	func performTaskA() {
+		backgroundPoem()
+		
+//		var society = Society(now: 2023)
+//		let futureYear = society.calculateTheFuture()
+//		print("The future year is: \(futureYear)")
+	}
+	
+	//enum to talk about 2 groups and how its a third group thats came frim 1 group but aspires to be like the capitalist
+	
+	//	let originalPop = 8_000_000_000
+	//
+	//	func performTaskB() {
+	//		print("\(areas[0])s human population was a sturdy \(originalPop) before the the catastrophe struck. \(disasters[1]) imapcted life drastically.") // maybe calling in the population makes the following line repetive.
+	//
+	//
+	
+	//		func calculateNewPop(originalPop: Double) -> Double {
+	//			let newPop = 1/4 * originalPop
+	//			return newPop
+	//		}
+	//
+	//		let newPop = calculateNewPop(originalPop: Double(originalPop))
+	//		//print("Original Population: \(originalPop)")
+	//		print("New Population: \(newPop)")
+	let originalPop = 8_000_000_000
+	_ = originalPop / 4
 	
 	
-	//print("Based on you test results. \(str).")
-	// use a function to subtract from the population
-    // create a planet name . Speak about how certain groups were stolen or settled on planet __ to recolonize and make the ship more habitable
-    //I want to create a else if statement and also also find a way to integrate the use of integers.
-    // The Earth became uninhabitable because of harmful Chemtrails released. Which led to a decrease in biodiversity leaving the earth with a water shortage and causing the Earths temperature to rise significantly , making the planet too hot for human survival.  2 billion people were wiped out .
-    
+	func performTaskB() {
+		print("\(areas[0])'s human population was a sturdy \(originalPop) before the catastrophe struck. \(disasters[1]) impacted life drastically. A three-fourths of human life was wiped out over the course of \(disasters[1]).")
+		
+		
+		let correctPercentage = 75
+		while correctPercentage == 75 {
+			print("Let's estimate the new population after \(disasters[1]) using your math and reading skills. Feel free to use a calculator or google for assistance")
+			print("Based on the information above, what percentage of people were wiped out because of \(disasters[1])?")
+			print("A) \(correctPercentage)%")
+			print("B) 15%")
+			print("C) 30%")
+			print("D) 45%")
+			
+			func notQuite() {
+				print("🫨 Not quite, \(CosmonautName). Breathe 😮‍💨 now try again! You can do it!")
+			}
+			
+			
+			print("Enter the letter of your choice (A, B, C, or D):")
+			
+			if let userInput = readLine() {
+				let userChoice = userInput.uppercased()
+				
+				if userChoice == "A" {
+					print("Correct! The percentage reduction is \(correctPercentage)%. \(areas[0])s population was reduced to \(wipeoutPopulation).")
+					break
+				} else if userChoice == "B" || userChoice == "C" || userChoice == "D" {
+					notQuite()
+				} else {
+					print("Invalid choice. Please enter A, B, C, or D.")
+				}
+			} else {
+				print("Invalid input. Please enter a valid choice (A, B, C, or D).")
+			}
+		}
+		
+		
+		
+		
+		print(
+   """
+   The \(areas[0]) became uninhabitable because harmful \(disasters[0]) were released
+   An insult to injury
+   There was already deforestation,our carbon footprints, and corporate greed
+   These \(disasters[0]) caused
+   Biodiversity to decrease
+   The plants withered away and animals went astray
+   Leaving the \(areas[0]) with a water shortage
+   Not even enough for Gaia to have tears to properly grieve
+   These \(disasters[0]) caused
+   The \(areas[0]) temperature to rise significantly
+   \(disasters[1]) a result of a lack of honor and empathy
+   """
+		)
+		
+		func temp(temp: Int) -> String {
+			
+			
+			return("The \(areas[0])'s temperature is \(temp) degrees.")
+			
+		}
+		
+		for _ in 0..<100 { // Simulate 100 time steps example in playground
+			temperature += 1
+			
+			switch temperature {
+			case 65 :
+				print("\(temp(temp: temperature))Over farming of fish and chemical dumps have poisoned the water sources.")
+			case 70:
+				print("\(temp(temp: temperature))Over farming has depleted the soil.")
+			case 75:
+				print("\(temp(temp: temperature))Wars for resources have intensified no one is safe.")
+			case 80:
+				print("\(temp(temp: temperature))Biodiversity is declining rapidly.")
+			case 85:
+				print("\(temp(temp: temperature))Water shortages are becoming critical.")
+			case 90:
+				print("\(temp(temp: temperature))The high carbon footprint is causing environmental harm. Human induced climate change.")
+			case 95..<100:
+				print("The \(areas[0]) is becoming unlivable.") //looping 5x shows the direness
+			default:
+				break
+			}
+		}
+		
+		print("The \(areas[0])'s temperature has reached \(temperature) degrees and is now unlivable.")
+		
+	}
+	
+	
+	func performTaskC() {
+		print("Those who could farm and garden were known as \(characters[1]).\(characters[1]) were considered chosen because they were able to create villages where food grew on a land that was decaying .\(characters[1]) had an mystical understanding of the land,using their knowledge to heal the soil, revive ancient farming practices, and cultivate food that sustained their people. Many of the \(characters[1]) had the gift to terraform. They could transform any atmosphere so that it was suitable for supporting human life.")
+		
+		print("Since oxygen was an essential element to keep people who settled in \(areas[1]) alive many of the \(characters[1]) were stolen by \(villians[1]). Some of the issues faced by \(characters[1]) on \(areas[0]) was the \(villians[0]) invading their enclave and robbing them of their livestock, food, and herbs. The \(villians[0]) would also kidnap some of \(characters[1]) to exploit their gifts of knowing how to work with the \(areas[0]). They would enslave them and make them work tirelessly to build what \(characters[1]) had in their villages. The \(villians[0]) would often barter some of \(characters[1]) to the \(villians[1]) for resources on the \(villians[1]) colonizer ships.")
+		
+		characterEncountersMarauders(CosmonautName: CosmonautName)
+		
+		func characterEncountersMarauders(CosmonautName: String) {
+			print("\(CosmonautName), thank you for coming to \(areas[0]) and helping \(characters[1]) feed their animals and tend their land to prepare for this seasons harvest. We are honored to be in your presence!")
+			print("Oh no \(CosmonautName) ! It looks like some \((villians[1])) have gotten in the villiage pretending to be weak travelers in need of our help. They may try to kidnap some more of our people and steal our herbs and livestock.")
+			// Ask the user if they want to take a closer look to check if it's dangerous
+			print("\(CosmonautName), do you think they will get away with our poeple this time? (Yes/No)")
+			if let userInput = readLine(), userInput.uppercased() == "Yes" {
+			// Maybe its dangerous maybe its not
+				let isDangerous = Bool.random()
+				if isDangerous {
+					print("(characters[2]) are stealing our livestock and herbs! \(characters[1]) must fight for their life. They are trying to kidnap our people from the village and force them into submission.")
+				} else {
+					print("They have stolen our livestock and herbs but no one was captured.")
+				}
+			} else {
+				
+				let isDangerous = Bool.random()
+				if isDangerous {
+					print("It turns out \(characters[1]) are dangerous. They are stealing our livestock and herbs! \(characters[1]) must fight for their life.")
 
-  
+					func battleOutcome(kosenStrength: Int, outLawsStrength: Int) -> String {
+						if kosenStrength > outLawsStrength {
+							return "You emerge victorious!"
+						} else {
+							return "You are defeated in battle."
+						}
+					}
 
+					func main() {
+						print("Welcome to The battle of \(characters[1]) and \(villians[1])!")
+						
+						// May be alot
+						let kosenStrength = 75
+						let outLawsStrength = 60
+						
+						print("You, Kosen, have a strength of \(kosenStrength). The outlaws have a strength of \(outLawsStrength).")
+						print("You encounter a group of \(villians[1]) in the woods. What will you do?")
+						print("1. Fight")
+						print("2. Flee")
+						
+						if let choice = readLine() {
+							if choice == "1" {
+								let outcome = battleOutcome(kosenStrength: kosenStrength, outLawsStrength: outLawsStrength)
+								print(outcome)
+								
+								if outcome == "You emerge victorious!" {
+									print("\(CosmonautName), celebrate your victory!")
+								
+								}
+							} else if choice == "2" {
+								print("You decide to flee from \(villians[2]).")
+								print("They will eventually come back, \(CosmonautName)")
+							} else {
+								print("Invalid choice. Please select '1' to fight or '2' to flee.")
+							}
+						}
+					}
+
+					main()
+
+				} else {
+					print("It turns out they weren't dangerous. They have stolen our livestock and herbs but no one was captured.")
+				}
+			}
+		}
+		
+		print("The Kosen's extraordinary gifts held the key to \(areas[0])'s revival and humanity's future among the stars.")
+		
+		for _ in 0...4 {
+			kosenpeopleGifts()
+		}
+		func kosenpeopleGifts()
+		{
+			let randomNum = Int.random(in: 0...4)
+			
+			switch randomNum {
+			case 0:
+				print("gardening")
+			case 1:
+				print("farming")
+			case 2:
+				print("medicine worker")
+			case 3:
+				print("water healers")
+			case 4:
+				print("seer")
+			case 5:
+				print("emotional intelligence")
+			case 6:
+				print("ancestral wisdom")
+			case 7:
+				print("patience")
+			case 8:
+				print("connection with nature")
+			case 9:
+				print("terraform: ability to cleanse the air")
+			case 10:
+				print("honorer of all life")
+			case 11:
+				print("creativity")
+			case 12:
+				print("honoring a higher consciousness")
+			case 13:
+				print("storytelling")
+			default:
+				print("chemist")
+			}
+			
+		}
+
+		
+ print("\(CosmonautName) its time for you to see what gift \(characters[1]) have appointed you based on your cosmic energy!")
+  print("Press 1 to see your \(characters[1]) gift or you can press 0 if you wish to skip.")
+
+  while let input = readLine(), let choice = Int(input) {
+	  if choice == 0 {
+		  print("Thank you for using \(characters[1]) extraordinary gifts program. Goodbye!")
+		  break
+	  } else if choice == 1 {
+		  print("You've received the following Kosen's gift:")
+		  userKosenGift()
+	  } else {
+		  print("Invalid choice. Please press 1 to receive a gift or 0 to exit.")
+	  }
+  }
+
+  func userKosenGift() {
+	
+	  let randomNum = Int.random(in: 0...15)
+	  
+	  switch randomNum {
+	  case 0:
+		  print("gardener")
+	  case 1:
+		  print("farmer")
+	  case 2:
+		  print("holistic healer")
+	  case 3:
+		  print("water healer")
+	  case 4:
+		  print("seer")
+	  case 5:
+		  print("emotional intelligence")
+	  case 6:
+		  print("ancestral wisdom")
+	  case 7:
+		  print("patience")
+	  case 8:
+		  print("ability to connect with all of nature")
+	  case 9:
+		  print("terraformer: ability to cleanse the air")
+	  case 10:
+		  print("honoring all life")
+	  case 11:
+		  print("creative")
+	  case 12:
+		  print("Gods favorite")
+	  case 13:
+		  print("storyteller")
+	 default:
+		  print("chemist")
+	  }
+  }
+
+		
+	}
+	
+	func performTaskD() {
+		print("After many wars with \(villians[0]) and \(villians[1]), \(characters[1]) packed up and headed to \(areas[1]) to begin a new life and build a new civilization.")
+		
+		struct SpaceExploration{
+			let shipName = "Mother Ship"
+			let duration: Double
+			let launchDate: Double
+			let restingPlanet = [areas[2]]
+			var missionStatus: String
+		}
+		enum Explore {
+			case space(duration: Double, launchDate: Double,restingPlanet: String)
+			case mission(missionStutus: String)
+			case homeBase(restingPlanet: String, size: Double, intelligentLife: String, resources: String)
+			case galaxy(majorStar: String, distanceFromEarth: Double)
+		}
+		//var space = Explore.space(duration: <#T##Double#>, launchDate: Double, restingPlanet: areas[2])
+		
+		
+		struct TheMotherShip {
+			let coordinates: Double // math that you practiced
+			let spaceColonies = ""
+			let spacecraft = ""
+			
+			
+		}
+		
+		struct BirthToMission {
+			var technologyUsed = ""
+			var spaceColonization = ""
+			let prophecy = ""
+			
+		}
+		
+		
+		
+	}
+	var choice: String = ""
+	print("Enter the area you wish to explore on Earth \(CosmonautName)")
+	print("Type A for '\(titles[1])' ,B for '\(titles[2])', or C for' \(titles[3])'.")
+
+	if let userDecision = readLine() {
+		choice = userDecision
+	}
+	//if USERC == "Earth" {
+	// make user choose A or B
+	// switch on new user choice, cases A and B
+	switch choice {
+	case "A":
+		print("\(titles[1])")
+		performTaskA()
+	case "B":
+		print("\(titles[2])") // double entedre. Bars!  Gaia is grieving. People are grieving Gaia .
+		performTaskB()
+	case "C":
+		print("\(titles[3])")
+		performTaskC()
+	case "D":
+		print("\(titles[4])")
+		performTaskC()
+	default:
+		print("Invalid choice")
+	}
+	
 }
-
-
-
-// To start the story, call the tellStory function.
-
