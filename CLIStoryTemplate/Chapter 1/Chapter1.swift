@@ -3,7 +3,7 @@
 import Foundation
 
 
-let titles = ["Emergence","Story Intro","Grieving Gaia","Few Are Chosen","War"]
+let titles = ["Emergence","Story Intro","Grieving Gaia","Few Are Chosen","I Need Some Space"]
 var storyTitle: String = "Bridges A Chem Tale"
 var villians = ["marauding bands of outlaws","Space Colonizers" ]
 var characters = ["Wallace Doubine","The Kosen"]
@@ -15,7 +15,7 @@ var score = 85
 var wipeoutPopulation = 2_000_000_000
 var CosmonautName = ""
 var USERC: String = ""
-var choice2: Bool = true
+var choice2: Bool = false
 
 
 func chapterOne() {
@@ -49,7 +49,7 @@ func chapterOne() {
 	//-------------------------------------------------
 	func chooseArea(){
 		
-		while(choice2) {
+		while(!choice2) {
 			print("Enter the area you want to explore . \(areas[0]) or \(areas[1])")
 			if let userChoice = readLine() {
 				USERC = userChoice
@@ -428,15 +428,51 @@ func chapterOne() {
 	}
 	
 	func performTaskD() {
-		print("War")
+		print("After many wars with \(villians[0]) and \(villians[1]), \(characters[1]) packed up and headed to \(areas[1]) to begin a new life and build a new civilization.")
+		
+		struct SpaceExploration{
+			let shipName = "Mother Ship"
+			let duration: Double
+			let launchDate: Double
+			let restingPlanet = [areas[2]]
+			var missionStatus: String
+		}
+		enum Explore {
+			case space(duration: Double, launchDate: Double,restingPlanet: String)
+			case mission(missionStutus: String)
+			case homeBase(restingPlanet: String, size: Double, intelligentLife: String, resources: String)
+			case galaxy(majorStar: String, distanceFromEarth: Double)
+		}
+		//var space = Explore.space(duration: <#T##Double#>, launchDate: Double, restingPlanet: areas[2])
+		
+		
+		struct TheMotherShip {
+			let coordinates: Double // math that you practiced
+			let spaceColonies = ""
+			let spacecraft = ""
+			
+			
+		}
+		
+		struct BirthToMission {
+			var technologyUsed = ""
+			var spaceColonization = ""
+			let prophecy = ""
+			
+		}
+		
 		
 		
 	}
-	
-	let choice = "C"
+	var choice: String = ""
+	print("Enter the area you wish to explore on Earth \(CosmonautName)")
+	print("Type A for '\(titles[1])' ,B for '\(titles[2])', or C for' \(titles[3])'.")
+
+	if let userDecision = readLine() {
+		choice = userDecision
+	}
 	//if USERC == "Earth" {
 	// make user choose A or B
-	
 	// switch on new user choice, cases A and B
 	switch choice {
 	case "A":
